@@ -44,10 +44,10 @@ Thumbs.db
 .env
 *.local
 
-# Database files, falls du lokale SQLite-Dateien nutzt
+# Database files
 *.sqlite
 *.db
 
-# Node / frontend, falls vorhanden
+# Node / frontend
 node_modules/
 dist/
