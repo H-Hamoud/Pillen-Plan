@@ -25,7 +25,7 @@ expo-env.d.ts
 *.iws
 out/
 
-# Js / Maven / Gradle build output
+# Js/tsx / Maven / Gradle build output
 target/
 build/
 .gradle/
