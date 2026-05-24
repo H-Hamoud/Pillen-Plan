@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: #f0f2f5;
+    padding: 20px;
+    display: flex;
+    min-height: 100vh;
+    gap: 20px;
+}
+
+/* Sidebar */
+/* <!-- Linke Seitenleiste --> */
+
+.search-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.search-box {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.1);
+
+}
+
+
+.pills-today {
+    background: white;
+    padding: 100px;
+    border-radius: 8px;
+    margin-bottom: 55px;
+// box-shadow: 0 2px 4px #0001;
+//-webkit-box-shadow: 4px -1px 38px 18px rgba(0,0,0,0.67);
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.1);
+}
+
+
+.pills-today h3 {
+    font-size: 22px;
+    margin-bottom: 160px;
+
+}
+
+.pills-list {
+    font-size: 16px;
+}
+
+/* Buttons */
+.action-button {
+    font-size: 20px;
+    width: 100%;
+    padding: 12px;
+    background: white;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 50px; /* Abstand zwischen Buttons */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.1);
+}
+
+
+.action-button:hover {
+    background: #f0f0f0;
+}
+
+.button-icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 5px;
+}
+
+/* Hauptbereich */
+.main-content {
+    flex: 1;
+
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+}
+.this-week{
+    box-shadow: 0 2px 4px #0001;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    background: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.1);
+}
+
+.nav-button.active {
+    background: #4a90e2;
+    color: white;
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.1);
+}
+
+/* Kalender */
+.calendar-header {
+    background: white;
+    font-size: x-large;
+    padding: 1px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.1);
+}
+.arrow-icon {
+    width: 55px;
+    height: 50px;
+
+}
+
+.arrow-button {
+    padding: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.calendar-grid {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.1);
+}
+
+
+
+.weekdays {
+    display: grid;
+    grid-template-columns: 80px repeat(7, 1fr);
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.1);
+
+}
+
+
+.weekday-cell {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(248, 246, 246, 0.07);
+
+
+}
+
+.time-grid {
+    display: grid;
+    grid-template-rows: repeat(12, 60px);
+    box-shadow: 0 2px 4px #e5dede;
+    border-radius: 8px;
+
+}
+
+.time-label {
+    text-align: center;
+    font-size: large;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 12px;
+    color: #666;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.1);
+
+}
+
+/* 3D */
+.action-button:active {
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(2px); /* Button bewegt sich leicht nach unten */
+}
+
+/* Optional: Hover-Effekt */
+.action-button:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Für die aktiven/selektierten Buttons (z.B. im Kalender) */
+.nav-button.active {
+    background-color: #4a90e2;
+    color: white;
+    /* Eingedrückter Effekt für aktive Buttons */
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Für die Pfeil-Buttons */
+.arrow-button {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.arrow-button:active {
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(1px);
+}
+
+/* Für die Kalender-Zellen */
+.grid-cell {
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.grid-cell:active {
+    background-color: #f0f0f0;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Stärkerer 3D-Effekt */
+.action-button {
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    /* Mehrere Schatten für 3D-Effekt */
+    box-shadow: 0 4px 0 #ddd,
+    0 5px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease;
+}
+
+.action-button:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 #ddd,
+    0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Noch stärkerer Effekt für wichtige Buttons */
+.primary-button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 15px 30px;
+    box-shadow: 0 6px 0 #357abd,
+    0 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+.primary-button:active {
+    transform: translateY(6px);
+    box-shadow: 0 0 0 #357abd,
+    0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Mobile Ansicht */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+    }
+}
